@@ -1,0 +1,20 @@
+{
+  "name": "@dwidge/timezone",
+  "version": "0.0.1",
+  "license": "BSL-1.0",
+  "author": "DWJ",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "prepare": "rimraf dist && tsc",
+    "test": "node --enable-source-maps --test --test-name-pattern"
+  },
+  "devDependencies": {
+    "rimraf": "^5.0.5",
+    "typescript": "^5.2.2"
+  }
+}

@@ -3,6 +3,10 @@
   "version": "0.0.1",
   "license": "BSL-1.0",
   "author": "DWJ",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dwidge/timezone.git"
+  },
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [
@@ -16,5 +20,12 @@
   "devDependencies": {
     "rimraf": "^5.0.5",
     "typescript": "^5.2.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "packageManager": "pnpm@9.7.1",
+  "engines": {
+    "node": ">=20"
   }
 }

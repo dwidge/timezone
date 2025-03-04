@@ -7,14 +7,22 @@
     "type": "git",
     "url": "git+https://github.com/dwidge/timezone.git"
   },
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/cjs/index.js",
+      "import": "./dist/esm/index.js",
+      "types": "./dist/types/index.d.ts"
+    }
+  },
   "files": [
     "dist",
     "src"
   ],
   "scripts": {
-    "prepare": "rimraf dist && tsc",
+    "prepare": "rimraf dist && ncp assets/ dist/ && tsc -b tsconfig.json tsconfig.cjs.json",
     "test": "node --enable-source-maps --test --test-name-pattern"
   },
   "devDependencies": {
